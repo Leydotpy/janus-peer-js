@@ -1,0 +1,43 @@
+{
+  "name": "janus-peer-js",
+  "version": "0.1.0",
+  "author": {
+    "email": "leydotpy.dev@gmail.com",
+    "name": "leydotpy",
+    "url": "github.com/leydotdev"
+  },
+  "description": "A Javascript Package that connects to Django-janus backend to provide video conferencing",
+  "license": "MIT",
+  "readme": "README.md",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/janus-peer.umd.cjs",
+  "module": "./dist/janus-peer.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/janus-peer.js",
+      "require": "./dist/janus-peer.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "eventemitter3": "^4.0.7",
+    "peerjs-js-binarypack": "^2.0.0",
+    "pixi.js": "^7.3.1",
+    "twilio-video": "^2.28.1",
+    "webrtc-adapter": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.2"
+  }
+}
